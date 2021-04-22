@@ -52,8 +52,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'jdamour'  
-        pswd = '67xvfybp' 
+        email =   
+        pswd =  
         report = 'Naterra'
         
         self.PageInitial.logg_inn(email,pswd)
@@ -119,8 +119,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'jdamou0'  
-        pswd = 'pvh4e3av' 
+        email =   
+        pswd =  
         report = 'Huhtamaki Chinet'
         
         self.PageInitial.logg_inn(email,pswd)
@@ -186,8 +186,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'pwagne3'  
-        pswd = '9t47py6c' 
+        email =   
+        pswd =  
         report = 'Duraflame summer total'
         
         self.PageInitial.logg_inn(email,pswd)
@@ -252,8 +252,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'pwagne3'  
-        pswd = '9t47py6c' 
+        email =   
+        pswd =  
         report = 'Duraflame summer weekly'
         
         self.PageInitial.logg_inn(email,pswd)
@@ -319,8 +319,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'pwagne3'  
-        pswd = '9t47py6c' 
+        email =   
+        pswd =  
         report = 'Duraflame winter total'
         
         self.PageInitial.logg_inn(email,pswd)
@@ -387,8 +387,8 @@ class Download_K_Mart_Data(unittest.TestCase):
         before = os.listdir(self.dir_download) 
 
         #Cargamos los datos del inicio de sesion
-        email = 'pwagne3'  
-        pswd = '9t47py6c' 
+        email =   
+        pswd =  
         report = 'Duraflame winter weekly'
         
         self.PageInitial.logg_inn(email,pswd)
