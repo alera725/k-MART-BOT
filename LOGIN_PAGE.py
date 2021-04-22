@@ -16,6 +16,7 @@ from selenium.common.exceptions import TimeoutException
 class login_page():
     def __init__(self,my_driver):
         
+        self.driver = my_driver
         self.log = (By.ID, 'dnn_ctr442_Login_Login_LDAP_txtUsername')
         self.pswd = (By.ID, 'dnn_ctr442_Login_Login_LDAP_txtPassword')
         self.buttonid = (By.ID, 'dnn_ctr442_Login_Login_LDAP_cmdLDAPLogin')
@@ -25,7 +26,7 @@ class login_page():
             loginn = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.log))
             loginn.send_keys(mail)
             
-            pwdd = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.shipment_history))
+            pwdd = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.pswd))
             pwdd.send_keys(pwd)
 
             button = WebDriverWait(self.driver,50).until(EC.element_to_be_clickable(self.buttonid))

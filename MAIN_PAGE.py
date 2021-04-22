@@ -34,7 +34,7 @@ class main_page():
         self.duraflame_winter_total_report = (By.XPATH, '//*[@id="FolderIcons"]/tbody/tr[2]/td[1]/div/table/tbody/tr/td[2]')
         self.duraflame_winter_week_report = (By.XPATH, '//*[@id="FolderIcons"]/tbody/tr[2]/td[2]/div/table/tbody/tr/td[2]')
         self.date_box = (By.ID, 'id_mstr285_txt')
-        self.run_report = (By.ID, 'id_mstr286')
+        self.run_reportt = (By.ID, 'id_mstr286')
         self.exp_report = (By.ID, 'tbExport')
         
         
@@ -50,7 +50,6 @@ class main_page():
             
     def alex_corporate_reports(self):
         try:
-            
             a_c_r = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.Alex_corporate)) 
             a_c_r.click()
             #time.sleep(2)
@@ -156,7 +155,7 @@ class main_page():
         try:
             
             #Run report    
-            rreport = WebDriverWait(self.driver,50).until(EC.element_to_be_clickable(self.run_report)) 
+            rreport = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.run_reportt)) 
             rreport.click()
             #time.sleep(2)
             
@@ -168,7 +167,7 @@ class main_page():
         try:
             
             #Run report    
-            expor_report = WebDriverWait(self.driver,50).until(EC.element_to_be_clickable(self.exp_report)) 
+            expor_report = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.exp_report)) 
             expor_report.click()
             #time.sleep(2)
             
