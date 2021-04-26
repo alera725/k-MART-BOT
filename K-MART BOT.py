@@ -108,7 +108,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\NATERRA'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\NATERRA\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
@@ -127,7 +127,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         print("Naterra is READY!!" ) 
         time.sleep(3)
     
-    @unittest.skip('Not need now') 
+    #@unittest.skip('Not need now') 
     def test_Chinet(self):
         before = os.listdir(self.dir_download) 
 
@@ -178,7 +178,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\CHINET'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\CHINET\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
@@ -198,7 +198,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(3)
         
         
-    @unittest.skip('Not need now') 
+    #@unittest.skip('Not need now') 
     def test_Duraflame_summer_total(self):
         before = os.listdir(self.dir_download) 
 
@@ -249,7 +249,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\SUMMER\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
@@ -268,7 +268,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         print("Duraflame summer total is READY!!" ) 
         time.sleep(3)
 
-    @unittest.skip('Not need now') 
+    #@unittest.skip('Not need now') 
     def test_Duraflame_summer_weekly(self):
         before = os.listdir(self.dir_download) 
 
@@ -319,7 +319,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\SUMMER\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
@@ -339,7 +339,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(3)
         
 
-    @unittest.skip('Not need now') 
+    #@unittest.skip('Not need now') 
     def test_Duraflame_winter_total(self):
         before = os.listdir(self.dir_download) 
 
@@ -390,7 +390,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\WINTER\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
@@ -411,7 +411,7 @@ class Download_K_Mart_Data(unittest.TestCase):
 
 
 
-    @unittest.skip('Not need now') 
+    #@unittest.skip('Not need now') 
     def test_Duraflame_winter_weekly(self):
         before = os.listdir(self.dir_download) 
 
@@ -462,7 +462,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
-        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME'
+        new_download = 'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\WINTER\\DATA'
         shutil.move('%s'%self.dir_download+'\\%s'%new_name, '%s'%new_download+'\\%s'%new_name)
         
         #Mas bien una vez que termine, volver a checar si la carpeta de downloads tiene algun archivo (volverlo a mover) o si no tiene ninguna entonces fin, Ver que solo se descargue un archivo 
