@@ -13,6 +13,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.support.ui import Select
 import time
 from datetime import date
 import datetime
@@ -36,6 +37,14 @@ class main_page():
         self.date_box = (By.ID, 'id_mstr285_txt')
         self.run_reportt = (By.ID, 'id_mstr286')
         self.exp_report = (By.ID, 'tbExport')
+        self.ad_hoc_metricss = (By.XPATH, '//*[@id="id_mstr86"]/table/tbody/tr[9]/td[2]')
+        self.invty = (By.XPATH, '//*[@id="id_mstr316ListContainer"]/div[2]/div/a')
+        self.metric = (By.ID, 'id_mstr316ListContainer') 
+        self.arrow = (By.ID, 'id_mstr318')
+        
+        #Esto es en el ultimo paso en export paso en summer total
+        #//*[@id="ribbonToolbarTabsListContainer"]/div[1]/table/tbody/tr/td[2]/div
+        #Report Home 
         
         
     def alex_sales_butto(self):
@@ -134,7 +143,33 @@ class main_page():
         except TimeoutException:
             print ("Loading -report_select- took too much time!")  
             
+  
+    def ad_hoc_metrics(self):
+        try:
             
+            ad_hoc_click = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.ad_hoc_metricss)) 
+            ad_hoc_click.click()
+            #time.sleep(2)
+            inventory_click = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.invty)) 
+            inventory_click.click()
+            time.sleep(5)  
+            
+            
+            #Buscar la metrica en el containerlist
+            #div title = Store (+/-) End Inv Units
+            #mettt = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.metric)) 
+            #mettt.click()
+            #time.sleep(5)  
+            
+            #click en la flecha
+            #ARRW = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.arrow)) 
+            #ARRW.click()
+            time.sleep(10)
+            
+        except TimeoutException:
+            print ("Loading -ad_hoc_metrics- took too much time!")   
+
+  
     def set_date(self):
         try:
             
@@ -167,7 +202,7 @@ class main_page():
         try:
             
             #Run report    
-            expor_report = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.exp_report)) 
+            expor_report = WebDriverWait(self.driver,200).until(EC.visibility_of_element_located(self.exp_report)) 
             expor_report.click()
             #time.sleep(2)
             

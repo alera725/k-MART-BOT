@@ -75,6 +75,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -102,9 +103,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Naterra L52 Weeks $, Unit TY vs LY Ending %s' %d1 + '.xlsx'
+        new_name = 'Naterra L52 Weeks $, Unit TY vs LY Ending' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -123,11 +124,16 @@ class Download_K_Mart_Data(unittest.TestCase):
         else:
             pass
             
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\NATERRA\\Naterra L52 Weeks $, Unit TY vs LY Ending' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
         #Listo
         print("Naterra is READY!!" ) 
         time.sleep(3)
     
-    #@unittest.skip('Not need now') 
+    @unittest.skip('Not need now') 
     def test_Chinet(self):
         before = os.listdir(self.dir_download) 
 
@@ -145,6 +151,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -172,9 +179,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Huhtamaki $, Units TY vs LY L52 Weeks Ending %s' %d1 + '.xlsx'
+        new_name = 'Huhtamaki $, Units TY vs LY L52 Weeks Ending' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -193,6 +200,12 @@ class Download_K_Mart_Data(unittest.TestCase):
         else:
             pass
             
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\CHINET\\Huhtamaki $, Units TY vs LY L52 Weeks Ending' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
+        
         #Listo
         print("Huhtamaki Chinet is READY!!" ) 
         time.sleep(3)
@@ -216,6 +229,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -243,9 +257,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Duraflame - Summer TOTAL %s' %d1 + '.xlsx'
+        new_name = 'Duraflame - Summer TOTAL' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -264,6 +278,11 @@ class Download_K_Mart_Data(unittest.TestCase):
         else:
             pass
             
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\SUMMER\\Duraflame - Summer TOTAL' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
         #Listo
         print("Duraflame summer total is READY!!" ) 
         time.sleep(3)
@@ -286,6 +305,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -313,9 +333,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Duraflame - Summer WEEKLY %s' %d1 + '.xlsx'
+        new_name = 'Duraflame - Summer WEEKLY' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -333,7 +353,14 @@ class Download_K_Mart_Data(unittest.TestCase):
             shutil.move('%s'%filename, '%s'%new_download)
         else:
             pass
+          
             
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\SUMMER\\Duraflame - Summer WEEKLY' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
+        
         #Listo
         print("Duraflame summer weekly is READY!!" ) 
         time.sleep(3)
@@ -357,6 +384,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -384,9 +412,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Duraflame - Winter TOTAL %s' %d1 + '.xlsx'
+        new_name = 'Duraflame - Winter TOTAL' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -404,6 +432,12 @@ class Download_K_Mart_Data(unittest.TestCase):
             shutil.move('%s'%filename, '%s'%new_download)
         else:
             pass
+        
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\WINTER\\Duraflame - Winter TOTAL' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
         
         #Listo
         print("Duraflame winter total is READY!!" ) 
@@ -429,6 +463,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(2)
         self.PageMain.report_select(report)
         time.sleep(7)
+        self.PageMain.ad_hoc_metrics()
         self.PageMain.set_date()
         self.PageMain.run_report()
         self.PageMain.export_report()
@@ -456,9 +491,9 @@ class Download_K_Mart_Data(unittest.TestCase):
         today = date.today()
         idx = (today.weekday() + 1) % 7
         sat = today - datetime.timedelta(7+idx-6) #Ultimo sabado
-        d1 = sat.strftime("%m-%d-%Y")
+        d1 = sat.strftime("%m.%d.%Y")
         
-        new_name = 'Duraflame - Winter WEEKLY %s' %d1 + '.xlsx'
+        new_name = 'Duraflame - Winter WEEKLY' + '.xlsx'
         shutil.move(filename,os.path.join(Initial_path,r'%s' %new_name))
         
         #MOVER EL ARCHIVO A LA UBICACION DESEADA
@@ -477,6 +512,13 @@ class Download_K_Mart_Data(unittest.TestCase):
         else:
             pass
             
+        
+        #Copiar y pegar el archivo en la otra direccion pjo: ver si va la r o no 
+        original = '%s'%new_download+'\\%s'%new_name
+        target = r'C:\\Users\\alejandro.gutierrez\\OneDrive - Carlin Group - CA Fortune\\Documents\\KROGER SELENIUM\\K-MART\\DURAFLAME\\WINTER\\Duraflame - Winter WEEKLY' + ' %s' %d1 + '.xlsx'
+        shutil.copyfile(original, target)
+        
+        
         #Listo
         print("Duraflame winter weekly is READY!!" ) 
         time.sleep(3)
