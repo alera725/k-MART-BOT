@@ -66,6 +66,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         report = 'Naterra'
         
         self.PageInitial.logg_inn(email,pswd)
+        self.PageMain.POPs_up()
         self.PageMain.alex_sales_butto()
         time.sleep(20)
         self.driver.switch_to.window(self.driver.window_handles[-1]) #Todo lo del iframe se soluciono con esto
@@ -211,7 +212,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(3)
         
         
-    #@unittest.skip('Not need now') 
+    @unittest.skip('Not need now') 
     def test_Duraflame_summer_total(self):
         before = os.listdir(self.dir_download) 
 
@@ -287,7 +288,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         print("Duraflame summer total is READY!!" ) 
         time.sleep(3)
 
-    #@unittest.skip('Not need now') 
+    @unittest.skip('Not need now') 
     def test_Duraflame_summer_weekly(self):
         before = os.listdir(self.dir_download) 
 
@@ -366,7 +367,7 @@ class Download_K_Mart_Data(unittest.TestCase):
         time.sleep(3)
         
 
-    #@unittest.skip('Not need now') 
+    @unittest.skip('Not need now') 
     def test_Duraflame_winter_total(self):
         before = os.listdir(self.dir_download) 
 
@@ -445,7 +446,7 @@ class Download_K_Mart_Data(unittest.TestCase):
 
 
 
-    #@unittest.skip('Not need now') 
+    @unittest.skip('Not need now') 
     def test_Duraflame_winter_weekly(self):
         before = os.listdir(self.dir_download) 
 

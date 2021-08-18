@@ -14,6 +14,9 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
+
 import time
 from datetime import date
 import datetime
@@ -23,6 +26,8 @@ class main_page():
     def __init__(self,my_driver):
         
         self.driver = my_driver
+        self.popup = (By.XPATH, '//*[@id="Form"]/div[4]/div[1]/button')
+        self.home = (By.XPATH, '//*[@id="dnn_wrapper"]/div[2]/div[3]/div/div/div/div[1]/a')
         self.Alex_sales_button = (By.ID, 'dnn_ctr424_Links_lstLinks_linkHyp_0')
         self.Alex_corporate = (By.XPATH, '//*[@id="projects_ProjectsStyle"]/table/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a')
         self.myreports = (By.ID, 'main')
@@ -40,12 +45,27 @@ class main_page():
         self.ad_hoc_metricss = (By.XPATH, '//*[@id="id_mstr86"]/table/tbody/tr[9]/td[2]')
         self.invty = (By.XPATH, '//*[@id="id_mstr316ListContainer"]/div[2]/div/a')
         self.metric = (By.ID, 'id_mstr316ListContainer') 
+        self.find_metric = (By.ID, 'id_mstr315_txt')
+        self.store_end_inv_units = (By.XPATH, '//*[@id="id_mstr316ListContainer"]/div[1]/div')
         self.arrow = (By.ID, 'id_mstr318')
         
         #Esto es en el ultimo paso en export paso en summer total
         #//*[@id="ribbonToolbarTabsListContainer"]/div[1]/table/tbody/tr/td[2]/div
         #Report Home 
-        
+
+    def POPs_up(self):
+        try:
+            
+            popup_window = WebDriverWait(self.driver,60).until(EC.visibility_of_element_located(self.popup))
+            popup_window.click()
+            
+            home_button = WebDriverWait(self.driver,60).until(EC.visibility_of_element_located(self.home))
+            home_button.click()
+            
+        except TimeoutException:
+            
+            print ("Loading -POPs_up- took too much time!")
+            pass        
         
     def alex_sales_butto(self):
         try:
@@ -161,10 +181,20 @@ class main_page():
             #mettt.click()
             #time.sleep(5)  
             
+            #Find Store (+/-) End Inv Units
+            id_search = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.find_metric)) 
+            id_search.send_keys('Store (+/-) End inv units')
+            id_search.send_keys(Keys.RETURN)
+            
+            #Click on Store (+/-) End Inv Units
+            metric_store_end_inv_units = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.store_end_inv_units)) #Store (+/-) End Inv Units
+            metric_store_end_inv_units.click()
+            #time.sleep(2)
+
             #click en la flecha
-            #ARRW = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.arrow)) 
-            #ARRW.click()
-            time.sleep(10)
+            ARRW = WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(self.arrow)) 
+            ARRW.click()
+            #time.sleep(10)
             
         except TimeoutException:
             print ("Loading -ad_hoc_metrics- took too much time!")   
