@@ -26,8 +26,8 @@ class main_page():
     def __init__(self,my_driver):
         
         self.driver = my_driver
-        self.popup = (By.XPATH, '//*[@id="Form"]/div[4]/div[1]/button')
-        self.home = (By.XPATH, '//*[@id="dnn_wrapper"]/div[2]/div[3]/div/div/div/div[1]/a')
+        self.popup = (By.XPATH, '//*[@id="Form"]/div[4]/div[1]/button') 
+        self.home = (By.XPATH, '//*[@id="dnn_wrapper"]/div[2]/div[3]/div/div/div/div[1]/a') 
         self.Alex_sales_button = (By.ID, 'dnn_ctr424_Links_lstLinks_linkHyp_0')
         self.Alex_corporate = (By.XPATH, '//*[@id="projects_ProjectsStyle"]/table/tbody/tr/td[2]/div/table/tbody/tr/td[2]/a')
         self.myreports = (By.ID, 'main')
@@ -56,10 +56,10 @@ class main_page():
     def POPs_up(self):
         try:
             
-            popup_window = WebDriverWait(self.driver,60).until(EC.visibility_of_element_located(self.popup))
+            popup_window = WebDriverWait(self.driver,1000).until(EC.visibility_of_element_located(self.popup))
             popup_window.click()
             
-            home_button = WebDriverWait(self.driver,60).until(EC.visibility_of_element_located(self.home))
+            home_button = WebDriverWait(self.driver,1000).until(EC.visibility_of_element_located(self.home))
             home_button.click()
             
         except TimeoutException:
@@ -118,6 +118,7 @@ class main_page():
             if report == 'Naterra':
                 
                 #CLick en el reporte
+                time.sleep(10)
                 naterra = WebDriverWait(self.driver,50).until(EC.visibility_of_element_located(self.naterra_report)) 
                 naterra.click()
                 #time.sleep(7)
